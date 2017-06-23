@@ -1,4 +1,4 @@
-package ch02.ex1_4_2_StringTemplates1
+package ch02
 
 fun main(args: Array<String>) {
     if (args.size > 0) {

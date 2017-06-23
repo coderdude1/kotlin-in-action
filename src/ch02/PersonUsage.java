@@ -1,6 +1,5 @@
 package ch02;
 
-import ch02.person.Person;
 
 /* Java */
 
