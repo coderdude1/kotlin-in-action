@@ -1,4 +1,6 @@
 package geometry.shapes
+//note that the package does not match the file system path, but kotlin can resolve it.  Intellij warns on it tho.
+//apparently the warning is assuming you are mixing java and kotlin
 
 import java.util.Random
 
