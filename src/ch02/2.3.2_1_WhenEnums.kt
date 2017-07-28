@@ -4,8 +4,9 @@ enum class Color {
     RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
 }
 
+//returns the mnemonic for the given color
 fun getMnemonic(color: Color) =
-    when (color) {
+    when (color) {          //note no breaks, they are implicit.  colors can be combined using commas
         Color.RED -> "Richard"
         Color.ORANGE -> "Of"
         Color.YELLOW -> "York"
