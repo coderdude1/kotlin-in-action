@@ -4,7 +4,7 @@ import ch02.colors.Color
 import ch02.colors.Color.*
 
 fun mixOptimized(c1: Color, c2: Color) =
-    when {
+    when {  //note no arg to when, therefore this is a Boolean expression.  more verbose in this case than the setOf
         (c1 == RED && c2 == YELLOW) ||
         (c1 == YELLOW && c2 == RED) ->
             ORANGE
