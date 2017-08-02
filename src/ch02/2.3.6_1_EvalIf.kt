@@ -4,8 +4,8 @@ interface Expr
 class Num(val value: Int) : Expr
 class Sum(val left: Expr, val right: Expr) : Expr
 
-fun eval(e: Expr): Int =
-    if (e is Num) {
+fun eval(e: Expr): Int =    //note the assignment to a function body
+    if (e is Num) { //in kotlin the if statement returns a value, this style is called expression body  syntax
         e.value
     } else if (e is Sum) {
         eval(e.right) + eval(e.left)
