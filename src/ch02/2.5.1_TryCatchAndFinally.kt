@@ -3,8 +3,9 @@ package ch02.ex5_1_TryCatchAndFinally
 import java.io.BufferedReader
 import java.io.StringReader
 
-fun readNumber(reader: BufferedReader): Int? {
-    try {
+//kotlin does not differentiate between checked and unchecked exceptions
+fun readNumber(reader: BufferedReader): Int? { //note no 'throws'
+    try {   //java style try/catch
         val line = reader.readLine()
         return Integer.parseInt(line)
     }
@@ -18,5 +19,5 @@ fun readNumber(reader: BufferedReader): Int? {
 
 fun main(args: Array<String>) {
     val reader = BufferedReader(StringReader("239"))
-    println(readNumber(reader))
+    println(readNumber(reader)) //note if null it actually prints "null"
 }

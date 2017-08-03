@@ -4,10 +4,10 @@ import java.io.BufferedReader
 import java.io.StringReader
 
 fun readNumber(reader: BufferedReader) {
-    val number = try {
+    val number = try { //assignment from try block
         Integer.parseInt(reader.readLine())
     } catch (e: NumberFormatException) {
-        null
+        null  //note no return
     }
 
     println(number)
@@ -15,5 +15,5 @@ fun readNumber(reader: BufferedReader) {
 
 fun main(args: Array<String>) {
     val reader = BufferedReader(StringReader("not a number"))
-    readNumber(reader)
+    readNumber(reader)//prints 'null'
 }
