@@ -8,7 +8,7 @@ fun fizzBuzz(i: Int) = when {
 }
 
 fun main(args: Array<String>) {
-    for (i in 100 downTo 1 step 2) {
-        print(fizzBuzz(i))
+    for (i in 100 downTo 1 step 2) { //downto makes it count in reverse, step 2 makes it count by 2.  Note there is an until fun to make it uninclusive (endp number not included)
+        println(fizzBuzz(i))
     }
 }
