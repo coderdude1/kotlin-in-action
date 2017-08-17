@@ -9,7 +9,7 @@ fun <T> joinToString(
 
     val result = StringBuilder(prefix)
 
-    for ((index, element) in collection.withIndex()) {
+    for ((index, element) in collection.withIndex()) { //index is the same as the i=0; i<x; i++;  element is the element at that index
         if (index > 0) result.append(separator)
         result.append(element)
     }
@@ -20,5 +20,8 @@ fun <T> joinToString(
 
 fun main(args: Array<String>) {
     val list = listOf(1, 2, 3)
-    println(joinToString(list, "; ", "(", ")"))
+    println(joinToString(list, "; ", "(", ")"))  //(1; 2; 3)
+
+    val listOfStrings = listOf("works", "on", "ALL", "TYPES")
+    println(joinToString(listOfStrings, "; ", "(", ")"))  //((works; on; ALL; TYPES)
 }
