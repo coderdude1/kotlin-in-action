@@ -1,5 +1,8 @@
 package ch03.JoinToStringFinal
 
+/**
+ * this is a top level function called out by the book.
+ */
 fun <T> Collection<T>.joinToString(
         separator: String = ", ",   //note the default values for the named params
         prefix: String = "",
