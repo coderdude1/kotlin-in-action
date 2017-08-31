@@ -4,7 +4,7 @@ open class View {
     open fun click() = println("View clicked")
 }
 
-class Button: View() {
+class Button: View() { //button is a subclass of View
     override fun click() = println("Button clicked")
 }
 

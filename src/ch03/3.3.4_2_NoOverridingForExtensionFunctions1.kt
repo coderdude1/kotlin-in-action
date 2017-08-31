@@ -1,10 +1,10 @@
 package ch03.ex3_4_2_NoOverridingForExtensionFunctions1
 
-open class View {
+open class View {   //open means open for extesnion
     open fun click() = println("View clicked")
 }
 
-class Button: View() {
+class Button: View() {  //default private (ie not open)
     override fun click() = println("Button clicked")
 }
 
