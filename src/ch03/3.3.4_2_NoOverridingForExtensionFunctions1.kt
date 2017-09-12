@@ -4,12 +4,12 @@ open class View {   //open means open for extesnion
     open fun click() = println("View clicked")
 }
 
-class Button : View() {  //default private (ie not open)
+class Button: View() {  //default private (ie not open)
     override fun click() = println("Button clicked")
 }
 
-fun View.showOff() = println("I'm a view!") //extension function on View.  Intellij warning 'receiver param is never used'
-fun Button.showOff() = println("I'm a button!") //extension function on Button (not an override!)  Intellij warning 'receiver param is never used'
+fun View.showOff() = println("I'm a view!") //extension function on View
+fun Button.showOff() = println("I'm a button!") //extension function on Button (not an override!)
 
 fun main(args: Array<String>) {
     val view: View = Button()  //button extends view
