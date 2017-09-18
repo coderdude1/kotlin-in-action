@@ -1,11 +1,11 @@
 package ch04.main
 
-class Button : Clickable, Focusable {
-    override fun click() = println("I was clicked")
+class Button : Clickable, Focusable {  //implements 2 interfaces (the ':' is same as extends and implements
+    override fun click() = println("I was clicked") //overrides are required in kotlin to prevent accidently overriding a parent fn
 
-    override fun showOff() {
-        super<Clickable>.showOff()
-        super<Focusable>.showOff()
+    override fun showOff() {    //both interfaces have a showOff therefor override
+        super<Clickable>.showOff()  //delegate to clickable showoff
+        super<Focusable>.showOff()  //delegate to Focusable showoff
     }
 }
 
