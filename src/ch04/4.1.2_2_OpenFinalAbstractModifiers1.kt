@@ -6,5 +6,9 @@ interface Clickable {
 }
 
 open class RichButton : Clickable {
-    final override fun click() {}
+    final override fun click() {} //final makes it not overridable even tho it overrides the Clickable click.  overriding a parent implies open
 }
+
+/*
+by being final by default this enables smart casting to work in more situations
+ */
