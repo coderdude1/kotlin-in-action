@@ -11,3 +11,14 @@ can incorporate them into your own examples or exercises.
 
 The numbering of the sample files corresponds to the order in which they
 appear in the book.
+
+
+## Some notes
+### Visibility rules in kotlin
+Kotlin is similar to java, but no package scope.  Instead if you don't declare an access modifier, it
+gets module scope.  A module is a compile module, ie something that is part of the same compilation
+group (intellij module, gradle module).  Private means 2 things, for a class member it is visible
+only in the class.  for  a top level declaration it is visible in the file (like a var/val outside of a class)?
+Protected is visible in subclasses and not allowed as a top level declaration
+
+Rules are here https://kotlinlang.org/docs/reference/visibility-modifiers.html
