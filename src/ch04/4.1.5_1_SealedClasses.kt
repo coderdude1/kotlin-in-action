@@ -8,8 +8,9 @@ fun eval(e: Expr): Int =
     when (e) {
         is Num -> e.value
         is Sum -> eval(e.right) + eval(e.left)
-        else ->
+        else ->  //default branch since we have when statement only  required by compiler
             throw IllegalArgumentException("Unknown expression")
+        //problem with thsi is it's cumbersome and a subclass might have issues with adding a new branch leading to bugs
     }
 
 fun main(args: Array<String>) {

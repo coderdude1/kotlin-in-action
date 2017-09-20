@@ -14,6 +14,24 @@ appear in the book.
 
 
 ## Some notes
+### Constructors
+you can create a constructor as part of the class definition
+From the docs
+A class in Kotlin can have a primary constructor and one or more secondary constructors.
+The primary constructor is part of the class header: it goes after the class name (and optional type parameters).
+https://kotlinlang.org/docs/reference/classes.html
+
+```
+class Person constructor(firstName: String) {
+}
+```
+ if there are no annotations or visibility mods, you can ignore the construcctor part
+```
+class Person(firstName: String) {
+}
+```
+
+
 ### Visibility rules in kotlin
 Kotlin is similar to java, but no package scope.  Instead if you don't declare an access modifier, it
 gets module scope.  A module is a compile module, ie something that is part of the same compilation
