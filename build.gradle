@@ -3,7 +3,7 @@ version '1.0-SNAPSHOT'
 
 //todo look into doing a kotlin version of the gradle file
 buildscript {
-    ext.kotlin_version = '1.1.4-3' //duh, the kotlin plugin version make it match intellij version to shut up warnings
+    ext.kotlin_version = '1.1.51' //duh, the kotlin plugin version make it match intellij version to shut up warnings
 
     repositories {
         mavenCentral()
