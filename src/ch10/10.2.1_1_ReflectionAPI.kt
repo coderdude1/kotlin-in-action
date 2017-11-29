@@ -1,5 +1,6 @@
 package ch10.ex2_1_1_ReflectionAPI
 
+//NOTE that this breaks with kotlin 1.2
 import kotlin.reflect.memberProperties
 
 class Person(val name: String, val age: Int)

@@ -1,12 +1,15 @@
 package ch04.ex3_1_2_2_ObjectEqualityEquals1
 
 class Client(val name: String, val postalCode: Int) {
-    override fun equals(other: Any?): Boolean {
-        if (other == null || other !is Client)
+    //any is like Object in java
+    override fun equals(other: Any?): Boolean { //override default equals to use properties instead
+        if (other == null || other !is Client)  //is is like instanceOf
             return false
         return name == other.name &&
                postalCode == other.postalCode
     }
+
+    //note no hashCode so this is incomplete
     override fun toString() = "Client(name=$name, postalCode=$postalCode)"
 }
 
