@@ -3,7 +3,7 @@ package ch04.ex4_1_1_ObjectDeclarations
 import java.util.Comparator
 import java.io.File
 
-object CaseInsensitiveFileComparator : Comparator<File> {
+object CaseInsensitiveFileComparator : Comparator<File> { //Object is a singleton (vs class)
     override fun compare(file1: File, file2: File): Int {
         return file1.path.compareTo(file2.path,
                 ignoreCase = true)
