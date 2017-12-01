@@ -1,13 +1,13 @@
 package ch05.ex1_4_2_AccessingVariablesInScope1
 
-fun printProblemCounts(responses: Collection<String>) {
-    var clientErrors = 0
-    var serverErrors = 0
-    responses.forEach {
+fun printProblemCounts(responses: Collection<String>) { //duh inputs
+    var clientErrors = 0  //function var
+    var serverErrors = 0  //derp same
+    responses.forEach { //start of lambda
         if (it.startsWith("4")) {
-            clientErrors++
+            clientErrors++  //vars declared outside of lambda still in scope
         } else if (it.startsWith("5")) {
-            serverErrors++
+            serverErrors++  //same
         }
     }
     println("$clientErrors client errors, $serverErrors server errors")
