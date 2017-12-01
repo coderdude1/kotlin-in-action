@@ -2,6 +2,7 @@ package ch05.ex1_2_LambdasAndCollections
 
 data class Person(val name: String, val age: Int)
 
+//pre java8 style of surfing a list
 fun findTheOldest(people: List<Person>) {
     var maxAge = 0
     var theOldest: Person? = null
