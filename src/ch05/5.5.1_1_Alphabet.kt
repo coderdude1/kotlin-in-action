@@ -12,12 +12,13 @@ fun alphabet(): String {
 //Note these are the '*_TheWithFunction 1 and 2
 fun lambdaAlphabet() : String {
     val stringBuilder = StringBuilder()
-    return with(stringBuilder) { //specify the reveiver to get invoked in the 'with' block
+    //note with() takes an arg and a lambda (arg is accessible via this. or without it
+    return with(stringBuilder) { //specify the receiver (stringBuilder) to get invoked in the 'with' block
         for (letter in 'A'..'Z') {
             this.append(letter) //calls a method on the reciever with the 'this'.  'this' appears optional in the block
         }
-        append("\nNow I really know my alphabet") //calls a method without 'this'
-        toString() //another method on the reciever (can invoke this.toString also
+        append("\nNow I really know my alphabet") //calls receiver without 'this'
+        toString() //another method on the reciever (can invoke this.toString also.  note intellij adds the ^with as a tip
     }
 }
 
