@@ -1,6 +1,7 @@
 package ch05.ex5_1_3_TheWithFunction2
 
-//expression syntax with the 'with' assinged to 'alphabet()' as the receiver
+//expression syntax with the 'with' assinged to 'alphabet()' as the receiver of the lambda
+//that follows the with (in the {} block in this case)
 //note this is a bit cleaner, less code than the previous with example
 fun alphabet() = with(StringBuilder()) {
     for (letter in 'A'..'Z') {
