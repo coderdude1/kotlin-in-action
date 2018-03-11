@@ -9,14 +9,15 @@ class MyService {
 }
 
 class MyTest {
-    private lateinit var myService: MyService
+    //common usecase of lateinit is when using DI, and it gets set externally after construction
+    private lateinit var myService: MyService //note non-null declaration with lateinit
 
     @Before fun setUp() {
-        myService = MyService()
+        myService = MyService() //now init it
     }
 
     @Test fun testAction() {
         Assert.assertEquals("foo",
-            myService.performAction())
+            myService.performAction()) //note no !!
     }
 }
