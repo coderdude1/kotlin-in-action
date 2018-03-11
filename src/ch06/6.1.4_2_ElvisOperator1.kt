@@ -8,8 +8,9 @@ class Company(val name: String, val address: Address?)
 class Person(val name: String, val company: Company?)
 
 fun printShippingLabel(person: Person) {
-    val address = person.company?.address
-      ?: throw IllegalArgumentException("No address")
+    //
+    val address = person.company?.address //if person.company.address is not null return it
+      ?: throw IllegalArgumentException("No address") //else throw this
     with (address) {
         println(streetAddress)
         println("$zipCode $city, $country")
